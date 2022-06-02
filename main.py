@@ -65,7 +65,7 @@ model.compile(optimizer=optimizers.Adam(),
               metrics=['accuracy'])
 
 
-batch_size = 20
+batch_size = 32
 target_size = (224, 224)
 
 train_datagen = ImageDataGenerator(rescale=1./255,
@@ -94,7 +94,29 @@ test_gen = test_datagen.flow_from_directory(PATH_TEST,
 
 
 history = model.fit_generator(train_gen,
-                              epochs=3,
-                              steps_per_epoch = 10682 // batch_size,
+                              epochs=1,
+                              steps_per_epoch = 4096 // batch_size,
                               validation_data = valid_gen,
-                              validation_steps = 3562 // batch_size)
+                              validation_steps = 2048 // batch_size)
+
+acc = history.history['acc']
+val_acc = history.history['val_acc']
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+epochs = range(1, len(acc) + 1)
+plt.plot(epochs, acc, 'bo', label='Training acc')
+plt.plot(epochs, val_acc, 'r', label='Validation acc')
+plt.title('Training and validation accuracy')
+plt.legend()
+plt.figure()
+plt.plot(epochs, loss, 'bo', label='Training loss')
+plt.plot(epochs, val_loss, 'r', label='Validation loss')
+plt.title('Training and validation loss')
+plt.legend()
+plt.show()
+
+test_loss, test_acc = model.evaluate_generator(test_gen, steps = 2048 // batch_size, verbose=1)
+print('test acc:', test_acc)
+
+model.save('MelanomaResNet50FineTune.h5')
+print("MelanomaResNet50FineTune.h5 was saved")
