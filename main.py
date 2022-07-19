@@ -11,7 +11,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.applications import ResNet50
 
 
-PATH = "C:\data\melanoma"
+PATH = "C:\data\dermmel"
 
 PATH_TRAIN = PATH + '/train/'
 PATH_VALID = PATH + '/valid/'
@@ -20,16 +20,15 @@ PATH_TEST = PATH + '/test/'
 def dataset_count(path, type):
     labels = os.listdir(path)
     total = 0
+    print(type, "photos", total)
     for label in labels:
         print(label,len(os.listdir(path + label)))
         total += len(os.listdir(path + label))
-
-    print(type, "training photos", total)
     print ("\n")
 
 dataset_count(PATH_TRAIN, "train")
-dataset_count(PATH_VALID, "train")
-dataset_count(PATH_TEST, "train")
+dataset_count(PATH_VALID, "validation")
+dataset_count(PATH_TEST, "testing")
 
 
 def dataset_display(path, sample, cat):
