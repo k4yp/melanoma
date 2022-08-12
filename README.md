@@ -19,7 +19,7 @@ with minor surgery. Deep Learning algorithms that automate the diagnosis of mela
 increase a dermatologist’s accuracy. Improved melanoma detection has the potential to benefit millions
 of people and save thousands of lives.
 
-![examples](src/examples.png)
+![examples](src/examples.png)  
 Figure 0: Examples of malignant and benign skin regions (ResearchGate, Example lesion classification
 of dermoscopic images - Noel Codella)
 
@@ -51,11 +51,9 @@ with CUDA. The dataset used is the HAM10k Dermatoscopic Image Collection from Ha
 augmented version is being used that balances the melanoma to non-melanoma samples using data
 augmentation.
 
-- Link to interactive notebook on Kaggle: https://www.kaggle.com/code/keypos/resnet50-melanoma-
-    classification
+- Link to interactive notebook on Kaggle: https://www.kaggle.com/code/keypos/resnet50-melanoma-classification
 - Link to augmented Kaggle dataset: https://www.kaggle.com/datasets/drscarlat/melanoma
-- Link to direct source code on GitHub: https://github.com/k4yp/melanoma/blob/main/resnet50-
-    melanoma-classification.ipynb
+- Link to direct source code on GitHub: https://github.com/k4yp/melanoma/blob/main/resnet50-melanoma-classification.ipynb
 
 ### 6 - Method
 
@@ -73,8 +71,7 @@ Deep Learning so multiple runs of different epochs will be tested to find the op
 A separate dataset of 3000 images the model has not been trained on will be used to test the models
 accuracy.
 
-![cnn](src/cnn.png)
-
+![cnn](src/cnn.png)  
 Figure 1: Example of Convolutional Neural Network Architecture
 
 ### 7 - Results
