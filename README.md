@@ -19,9 +19,9 @@ with minor surgery. Deep Learning algorithms that automate the diagnosis of mela
 increase a dermatologist’s accuracy. Improved melanoma detection has the potential to benefit millions
 of people and save thousands of lives.
 
+![examples](src/examples.png)
 Figure 0: Examples of malignant and benign skin regions (ResearchGate, Example lesion classification
 of dermoscopic images - Noel Codella)
-![examples](src/examples.png)
 
 ### 2 - Aim
 
