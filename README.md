@@ -1,6 +1,6 @@
 # Melanoma Detection with Deep Learning
 
-## Sience Depth Study
+## Science Depth Study
 
 ![intro](src/intro.png)
 
