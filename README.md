@@ -42,7 +42,7 @@ higher accuracy than dermatologists, due to the large training dataset and the c
 - Control Variable - Accuracy of melanoma detection from human dermatologists
 
 
-### 5 - Materials
+### 5 - Resources
 
 A laptop with a stable internet connection, where you can run the code in a free online cloud virtual
 machine like Google Collaboratory or an interactive Kaggle Notebook. For offline use a computer with
